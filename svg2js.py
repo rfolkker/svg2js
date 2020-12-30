@@ -8,11 +8,11 @@ def create_html(x,y,data):
         "<head>\n",
         "  <meta charset=\"utf-8\">\n",
         "\n",
-        "  <title>The HTML5 Herald</title>\n",
+        "  <title>SVG to JavaScript</title>\n",
         "  <meta name=\"description\" content=\"SVG Viewer\">\n",
         "  <meta name=\"author\" content=\"Darnell J. Otterson\">\n",
         "\n",
-        "  <link rel=\"stylesheet\" href=\"css/styles.css?v=1.0\">\n",
+        "  <link rel=\"stylesheet\" href=\"styles.css?v=1.0\">\n",
         "\n",
         "</head>\n",
         "\n",
@@ -113,8 +113,8 @@ def main():
     jsFile = np.append(jsFile, "ctx.stroke();\n")
     # Now write it out to a file and see what we get
 
-#    with open('brush.png', 'wb') as fp:
-#        fp.write(base64.b64decode(data))
+    with open('brush.png', 'wb') as fp:
+        fp.write(base64.b64decode(data))
     with open('svgWrite.js', 'w') as fp:
         fp.writelines(jsFile)
     with open('svgWrite.html', 'w') as fp:
